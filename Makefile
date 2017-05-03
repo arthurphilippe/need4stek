@@ -5,7 +5,7 @@
 ## Login   <arthur@epitech.net>
 ##
 ## Started on  Mon Nov  7 11:39:45 2016 Arthur Philippe
-## Last update Wed May  3 11:24:31 2017 Arthur Philippe
+## Last update Wed May  3 13:06:19 2017 Cheap
 ##
 
 CC	=	gcc
@@ -15,11 +15,18 @@ RM	=	rm -f
 NAME	=	ai
 
 SRCS	=	src/main.c				\
+		src/usefull_fcts/getfloat.c		\
+		src/usefull_fcts/match.c		\
+		src/usefull_fcts/str_fcts.c		\
+		src/usefull_fcts/str.c			\
+		src/usefull_fcts/str_to_word_tab.c	\
+		src/usefull_fcts/get_next_line.c
 
 OBJS	=	$(SRCS:.c=.o)
 
 CFLAGS	=	-Wextra -Wall
 
+CFLAGS	=	-ggdb
 ##CFLAGS	+=	-Werror
 
 CFLAGS	+=	-I include/
@@ -30,6 +37,7 @@ all: $(NAME)
 
 $(NAME): make_lacp $(OBJS)
 	$(CC) $(OBJS) -o $(NAME) $(LDFLAGS)
+	cp $(NAME) n4s_package/.
 
 make_lacp:
 	$(MAKE) -C lib/acp

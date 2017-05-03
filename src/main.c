@@ -5,11 +5,14 @@
 ** Login   <arthur.philippe@epitech.eu>
 **
 ** Started on  Wed May  3 10:55:23 2017 Arthur Philippe
-** Last update Wed May  3 12:08:57 2017 Arthur Philippe
+** Last update Wed May  3 13:29:37 2017 Cheap
 */
 
+#include <unistd.h>
 #include "acp.h"
 #include "n4s.h"
+#include "get_next_line.h"
+#include "fcts.h"
 
 t_cmd_n4s g_cmds[] =
   {
@@ -29,5 +32,15 @@ t_cmd_n4s g_cmds[] =
 
 int	main()
 {
-  acp_print("Kappa Wa Kawaïi Desu Nee Senpaiii\n");
+  acp_print("START_SIMULATION\n");
+  acp_putstr(2, get_next_line(0));
+  acp_putstr(2, "\n");
+  acp_print("CAR_FORWARD:1\n");
+  acp_putstr(2, get_next_line(0));
+  acp_putstr(2, "\n");
+  sleep(3);
+  acp_print("STOP_SIMULATION\n");
+  acp_putstr(2, get_next_line(0));
+  acp_putstr(2, "\n");
+  return (0);
 }
