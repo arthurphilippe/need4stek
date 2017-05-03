@@ -5,14 +5,14 @@
 ## Login   <arthur@epitech.net>
 ##
 ## Started on  Mon Nov  7 11:39:45 2016 Arthur Philippe
-## Last update Wed May  3 10:57:00 2017 Arthur Philippe
+## Last update Wed May  3 11:24:31 2017 Arthur Philippe
 ##
 
 CC	=	gcc
 
 RM	=	rm -f
 
-NAME	=	n4s
+NAME	=	ai
 
 SRCS	=	src/main.c				\
 
