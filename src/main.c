@@ -5,12 +5,12 @@
 ** Login   <arthur.philippe@epitech.eu>
 **
 ** Started on  Wed May  3 10:55:23 2017 Arthur Philippe
-** Last update Wed May  3 10:56:13 2017 Arthur Philippe
+** Last update Wed May  3 11:00:45 2017 Cheap
 */
 
 #include "acp.h"
 
 int	main()
 {
-  acp_print("bonsoir\n");
+  acp_print("Kappa Wa Kawaïi Desu Nee Senpaiii\n");
 }
