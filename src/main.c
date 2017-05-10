@@ -5,7 +5,7 @@
 ** Login   <arthur.philippe@epitech.eu>
 **
 ** Started on  Wed May  3 10:55:23 2017 Arthur Philippe
-** Last update Wed May  3 13:29:37 2017 Cheap
+** Last update Mon May  8 17:29:19 2017 Arthur Philippe
 */
 
 #include <unistd.h>
@@ -28,7 +28,7 @@ t_cmd_n4s g_cmds[] =
     {CMD_GET_MSPEED, VAL_GET_MSPEED, ASW_GET_MSPEED},
     {CMD_GET_LSPEED, VAL_GET_LSPEED, ASW_GET_LSPEED},
     {CMD_GET_SIM_T, VAL_GET_SIM_T, ASW_GET_SIM_T},
-};
+  };
 
 int	main()
 {
