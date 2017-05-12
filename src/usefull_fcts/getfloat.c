@@ -1,15 +1,14 @@
 /*
 ** getfloat.c for get_float in /home/cheap/Code_Arena/Delivery/CPE/CPE_2016_n4s/src/usefull_fcts
-** 
+**
 ** Made by Cheap
 ** Login   <anthony.tram@epitech.eu>
-** 
+**
 ** Started on  Wed May  3 12:32:30 2017 Cheap
-** Last update Wed May  3 12:48:20 2017 Cheap
+** Last update Fri May 12 13:14:41 2017 Arthur Philippe
 */
 
 #include "defines.h"
-#include "n4s.h"
 #include "acp.h"
 
 float		get_float(char *str)

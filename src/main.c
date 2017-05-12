@@ -5,12 +5,12 @@
 ** Login   <arthur.philippe@epitech.eu>
 **
 ** Started on  Wed May  3 10:55:23 2017 Arthur Philippe
-** Last update Mon May  8 17:29:19 2017 Arthur Philippe
+** Last update Fri May 12 13:14:09 2017 Arthur Philippe
 */
 
 #include <unistd.h>
 #include "acp.h"
-#include "n4s.h"
+#include "n4s_cmd.h"
 #include "get_next_line.h"
 #include "fcts.h"
 
