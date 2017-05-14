@@ -5,7 +5,7 @@
 ** Login   <arthur.philippe@epitech.eu>
 **
 ** Started on  Fri May 12 14:20:28 2017 Arthur Philippe
-** Last update Fri May 12 16:21:56 2017 Arthur Philippe
+** Last update Sun May 14 10:35:50 2017 Arthur Philippe
 */
 
 #include <stdlib.h>
@@ -35,7 +35,7 @@ int	ai(void)
   run = 1;
   while (run)
     {
-      free (get_lidar());
+      free(get_lidar());
       run = 0;
     }
   return (SUCCESS);

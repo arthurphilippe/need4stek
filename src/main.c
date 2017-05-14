@@ -5,7 +5,7 @@
 ** Login   <arthur.philippe@epitech.eu>
 **
 ** Started on  Wed May  3 10:55:23 2017 Arthur Philippe
-** Last update Fri May 12 16:24:01 2017 Arthur Philippe
+** Last update Sun May 14 10:35:42 2017 Arthur Philippe
 */
 
 #include <unistd.h>
@@ -18,16 +18,10 @@
 int	main()
 {
   send_cmd("START_SIMULATION");
-  // dprintf(2, get_next_line(0));
-  // dprintf(2, "\n");
   send_cmd(CMD_GET_LIDAR);
-  // dprintf(2, get_next_line(0));
-  // dprintf(2, "\n");
   get_next_line(0);
   get_next_line(0);
   ai();
   send_cmd("STOP_SIMULATION");
-  // dprintf(2, get_next_line(0));
-  // dprintf(2, "\n");
   return (0);
 }
