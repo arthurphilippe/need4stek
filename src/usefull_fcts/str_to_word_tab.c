@@ -5,7 +5,7 @@
 ** Login   <arthur.philippe@epitech.eu>
 **
 ** Started on  Wed Apr 12 14:47:39 2017 Arthur Philippe
-** Last update Wed Apr 12 14:47:45 2017 Arthur Philippe
+** Last update Fri May 12 15:08:31 2017 Arthur Philippe
 */
 
 #include <stdlib.h>
@@ -22,7 +22,7 @@ int	word_count(char *str)
   state = 0;
   while (str[i])
     {
-      if (str[i] == ' ' || str[i] == '\t')
+      if (str[i] == ':' || str[i] == '\t')
 	state = 0;
       else if (!state)
 	{
@@ -40,7 +40,7 @@ int	len_to_next_spacer(char *str)
   int	i;
 
   i = 0;
-  while (str[i] && str[i] != ' ')
+  while (str[i] && str[i] != ':')
     i += 1;
   return (i);
 }
@@ -61,10 +61,10 @@ char	**my_str_to_word_tab(char *str)
       tab_out[i] = malloc(sizeof(char) * my_strlen(str) + 2);
       if (!tab_out[i])
 	return (0);
-      while (str[it] && (str[it] == ' ' || str[it] == '\t'))
+      while (str[it] && (str[it] == ':' || str[it] == '\t'))
 	it += 1;
       i2 = 0;
-      while (str[it] && str[it] != ' ' && str[it] != '\t')
+      while (str[it] && str[it] != ':' && str[it] != '\t')
 	tab_out[i][i2++] = str[it++];
       tab_out[i][i2] = 0;
       i += 1;
@@ -73,7 +73,7 @@ char	**my_str_to_word_tab(char *str)
   return (tab_out);
 }
 
-void	free_word_tab(char **tab)
+void	free_tab(char **tab)
 {
   int	i;
 

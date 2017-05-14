@@ -5,7 +5,7 @@
 ** Login   <arthur.philippe@epitech.eu>
 **
 ** Started on  Wed May  3 11:36:03 2017 Arthur Philippe
-** Last update Wed May  3 12:01:37 2017 Arthur Philippe
+** Last update Fri May 12 13:29:56 2017 Arthur Philippe
 */
 
 #ifndef N4S_H_
@@ -61,5 +61,7 @@ typedef struct	s_cmd_n4s
   int		f_type;
   int		f_aws;
 }		t_cmd_n4s;
+
+extern t_cmd_n4s	g_cmds[];
 
 #endif /* !N4S_H_ */
