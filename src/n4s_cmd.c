@@ -5,7 +5,7 @@
 ** Login   <arthur.philippe@epitech.eu>
 **
 ** Started on  Fri May 12 13:27:20 2017 Arthur Philippe
-** Last update Mon May 29 12:28:28 2017 Arthur Philippe
+** Last update Mon May 29 14:18:13 2017 Arthur Philippe
 */
 
 #include <stdio.h>
@@ -13,7 +13,7 @@
 #include "n4s_cmd.h"
 #include "str.h"
 
-t_cmd_n4s g_cmds[] =
+t_cmd_n4s	g_cmds[] =
   {
     {CMD_START, VAL_START, ASW_START},
     {CMD_STOP, VAL_STOP, ASW_STOP},
@@ -44,23 +44,24 @@ int	get_val_type(char *cmd)
   return (ERR);
 }
 
-void	send_cmd(char *cmd, float arg_fl, int arg_int)
+t_cmd_outp	*send_cmd(char *cmd, float arg_fl, int arg_int)
 {
-  int	type_f;
+  int		type_f_val;
 
-  type_f = get_val_type(cmd);
+  type_f_val = get_val_type(cmd);
   dprintf(1, "%s", cmd);
   dprintf(2, "sent: %s", cmd);
-  if (type_f == TYPE_U_FLOAT || type_f == TYPE_S_FLOAT)
+  if (type_f_val == TYPE_U_FLOAT || type_f_val == TYPE_S_FLOAT)
     {
       dprintf(1, ":%f", arg_fl);
       dprintf(2, ":%f", arg_fl);
     }
-  else if (type_f == TYPE_INT)
+  else if (type_f_val == TYPE_INT)
     {
       dprintf(1, ":%d", arg_int);
       dprintf(2, ":%d", arg_int);
     }
   dprintf(1, "\n");
   dprintf(2, "\n");
+  return (get_asw(cmd));
 }

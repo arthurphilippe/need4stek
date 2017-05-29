@@ -5,7 +5,7 @@
 ** Login   <arthur.philippe@epitech.eu>
 **
 ** Started on  Wed May  3 11:36:03 2017 Arthur Philippe
-** Last update Fri May 12 13:29:56 2017 Arthur Philippe
+** Last update Mon May 29 14:33:18 2017 Arthur Philippe
 */
 
 #ifndef N4S_H_
@@ -59,9 +59,19 @@ typedef struct	s_cmd_n4s
 {
   char		*cmd_line;
   int		f_type;
-  int		f_aws;
+  int		f_asw;
 }		t_cmd_n4s;
 
+typedef struct	s_cmd_outp
+{
+  int		ret_code;
+  float		*lidar;
+  float		float_ret;
+  long		time[2];
+}		t_cmd_outp;
+
+t_cmd_outp	*send_cmd(char *cmd, float arg_fl, int arg_int);
+t_cmd_outp	*get_asw(char *cmd);
 extern t_cmd_n4s	g_cmds[];
 
 #endif /* !N4S_H_ */

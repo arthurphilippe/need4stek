@@ -5,7 +5,7 @@
 ** Login   <arthur.philippe@epitech.eu>
 **
 ** Started on  Wed May  3 10:55:23 2017 Arthur Philippe
-** Last update Mon May 29 12:30:19 2017 Arthur Philippe
+** Last update Mon May 29 14:37:43 2017 Arthur Philippe
 */
 
 #include <unistd.h>
@@ -17,9 +17,8 @@
 
 int	main()
 {
-  send_cmd("START_SIMULATION");
-  get_next_line(0);
+  send_cmd("START_SIMULATION", 0.0, 0);
   ai();
-  send_cmd("STOP_SIMULATION");
+  send_cmd("STOP_SIMULATION", 0.0, 0);
   return (0);
 }

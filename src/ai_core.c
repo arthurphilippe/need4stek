@@ -5,7 +5,7 @@
 ** Login   <arthur.philippe@epitech.eu>
 **
 ** Started on  Fri May 12 14:20:28 2017 Arthur Philippe
-** Last update Sun May 14 10:35:50 2017 Arthur Philippe
+** Last update Mon May 29 14:35:07 2017 Arthur Philippe
 */
 
 #include <stdlib.h>
@@ -28,14 +28,16 @@ void	display_tab(char **tab)
     }
 }
 
-int	ai(void)
+int		ai(void)
 {
-  int	run;
+  t_cmd_outp	*asw;
+  int		run;
 
   run = 1;
   while (run)
     {
-      free(get_lidar());
+      asw = send_cmd(CMD_GET_LIDAR, 0.0, 0);
+      display_float_tab(asw->lidar);
       run = 0;
     }
   return (SUCCESS);

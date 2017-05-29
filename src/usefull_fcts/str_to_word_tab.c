@@ -5,7 +5,7 @@
 ** Login   <arthur.philippe@epitech.eu>
 **
 ** Started on  Wed Apr 12 14:47:39 2017 Arthur Philippe
-** Last update Mon May 29 12:59:07 2017 Arthur Philippe
+** Last update Mon May 29 14:59:43 2017 Arthur Philippe
 */
 
 #include <stdlib.h>
@@ -35,7 +35,7 @@ int	word_count(char *str)
   state = 0;
   while (str[i])
     {
-      if (str[i] == ':' || str[i] == '\t')
+      if (str[i] == ':')
 	state = 0;
       else if (!state)
 	{
@@ -76,10 +76,10 @@ char	**my_str_to_word_tab(char *str)
 	  free_tab(tab_out);
 	  return (NULL);
 	}
-      while (str[it] && (str[it] == ':' || str[it] == '\t'))
+      while (str[it] && str[it] == ':')
 	it += 1;
       i2 = 0;
-      while (str[it] && str[it] != ':' && str[it] != '\t')
+      while (str[it] && str[it] != ':')
 	tab_out[i][i2++] = str[it++];
       tab_out[i++][i2] = 0;
     }

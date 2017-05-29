@@ -5,7 +5,7 @@
 ** Login   <arthur.philippe@epitech.eu>
 **
 ** Started on  Fri May 12 14:24:00 2017 Arthur Philippe
-** Last update Mon May 29 12:53:38 2017 Arthur Philippe
+** Last update Mon May 29 14:49:45 2017 Arthur Philippe
 */
 
 #include <stdlib.h>
@@ -59,7 +59,7 @@ float	*get_laser_tab(char **asw_tab)
       if (is_a_float(*asw_tab))
 	{
 	  tmp = (float) atof(*asw_tab);
-          laser_tab[idx++] = tmp;
+	  laser_tab[idx++] = tmp;
 	}
       asw_tab += 1;
     }
@@ -73,7 +73,7 @@ float	*get_lidar(void)
   char	**asw_tab;
   float	*laser_tab;
 
-  send_cmd(CMD_GET_LIDAR);
+  send_cmd(CMD_GET_LIDAR, 0.0, 0);
   asw = get_next_line(0);
   dprintf(2, "got: %s\n", asw);
   laser_tab = NULL;

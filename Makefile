@@ -5,7 +5,7 @@
 ## Login   <arthur@epitech.net>
 ##
 ## Started on  Mon Nov  7 11:39:45 2016 Arthur Philippe
-## Last update Mon May 29 12:27:59 2017 Arthur Philippe
+## Last update Mon May 29 14:19:29 2017 Arthur Philippe
 ##
 
 CC	=	gcc
@@ -19,6 +19,7 @@ LIBACP	=	lib/acp/libacp.a
 SRCS	=	src/main.c				\
 		src/ai_core.c				\
 		src/n4s_cmd.c				\
+		src/n4s_asw.c				\
 		src/get_lidar.c				\
 		src/usefull_fcts/getfloat.c		\
 		src/usefull_fcts/match.c		\
@@ -59,7 +60,7 @@ clean:
 	@echo -e " of $(NAME)'s object files"
 
 fclean: clean
-	$(RM) $(NAME)
+	@$(RM) $(NAME)
 
 re: fclean all
 
