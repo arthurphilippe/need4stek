@@ -5,7 +5,7 @@
 ## Login   <arthur@epitech.net>
 ##
 ## Started on  Mon Nov  7 11:39:45 2016 Arthur Philippe
-## Last update Fri May 12 16:29:30 2017 Arthur Philippe
+## Last update Mon May 29 12:26:38 2017 Arthur Philippe
 ##
 
 CC	=	gcc
@@ -13,6 +13,8 @@ CC	=	gcc
 RM	=	rm -f
 
 NAME	=	ai
+
+LIBACP	=	lib/acp/libacp.a
 
 SRCS	=	src/main.c				\
 		src/ai_core.c				\
@@ -28,29 +30,36 @@ OBJS	=	$(SRCS:.c=.o)
 
 CFLAGS	=	-Wextra -Wall
 
-# CFLAGS	=	-ggdb
 ##CFLAGS	+=	-Werror
 
 CFLAGS	+=	-I include/
 
 LDFLAGS	=	-L./lib/acp -lacp -lm
 
+ifndef VERBOSE
+ MAKEFLAGS	+=	--no-print-directory
+endif
+
+GREEN	=	\033[0;32m
+
+RESET	=	\033[0m
+
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	$(MAKE) -C lib/acp
-	$(CC) $(OBJS) -o $(NAME) $(LDFLAGS)
+$(LIBACP):
+	@$(MAKE) -C lib/acp/
 
-make_lacp:
-	$(MAKE) -C lib/acp
+$(NAME): $(LIBACP) $(OBJS)
+	@$(CC) $(OBJS) -o $(NAME) $(LDFLAGS)
+	@echo -e "\n$(GREEN)$(NAME) built$(RESET)\n--------------------"
 
 clean:
-	$(RM) $(OBJS)
-	$(MAKE) clean -C lib/acp
+	@$(MAKE) fclean -C lib/acp
+	@echo -en "cleaned " ; $(RM) $(OBJS) | wc -l | tr -d '\n'
+	@echo -e " of $(NAME)'s object files"
 
 fclean: clean
 	$(RM) $(NAME)
-	$(MAKE) fclean -C lib/acp
 
 re: fclean all
 
