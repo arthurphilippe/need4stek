@@ -5,12 +5,12 @@
 ## Login   <arthur@epitech.net>
 ##
 ## Started on  Mon Nov  7 11:39:45 2016 Arthur Philippe
-## Last update Mon May 29 12:26:38 2017 Arthur Philippe
+## Last update Mon May 29 12:27:59 2017 Arthur Philippe
 ##
 
 CC	=	gcc
 
-RM	=	rm -f
+RM	=	rm -fv
 
 NAME	=	ai
 
