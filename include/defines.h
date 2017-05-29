@@ -5,7 +5,7 @@
 ** Login   <anthony.tram@epitech.eu>
 **
 ** Started on  Wed May  3 12:45:02 2017 Cheap
-** Last update Fri May 12 14:22:40 2017 Arthur Philippe
+** Last update Mon May 29 12:17:58 2017 Arthur Philippe
 */
 
 #ifndef DEFINES_H_
@@ -13,5 +13,6 @@
 
 # define FAILURE	84
 # define SUCCESS	0
+# define ERR		-1
 
 #endif /* !DEFINES_H_ */
