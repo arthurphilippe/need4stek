@@ -5,14 +5,18 @@
 ## Login   <arthur@epitech.net>
 ##
 ## Started on  Mon Nov  7 11:39:45 2016 Arthur Philippe
-## Last update Mon May  8 11:19:20 2017 Arthur Philippe
+## Last update Thu May 25 11:00:08 2017 Arthur Philippe
 ##
 
 CC	=	gcc
 
-RM	=	rm -f
+RM	=	rm -fv
 
 NAME	=	libacp.a
+
+GREEN	=	\033[0;32m
+
+RESET	=	\033[0m
 
 SRCS	=	src/print/my_printf.c		\
 		src/print/disp.c		\
@@ -39,13 +43,15 @@ CFLAGS	+=	-I include/
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rc $(NAME) $(OBJS)
+	@ar rc $(NAME) $(OBJS)
+	@echo -e "\n$(GREEN)$(NAME) built$(RESET)\n--------------------"
 
 clean:
-	$(RM) $(OBJS)
+	@echo -en "cleaned " ; $(RM) $(OBJS) | wc -l | tr -d '\n'
+	@echo -e " of $(NAME)'s object files"
 
 fclean: clean
-	$(RM) $(NAME)
+	@$(RM) $(NAME)
 
 re: fclean all
 
