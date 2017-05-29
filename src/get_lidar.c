@@ -5,7 +5,7 @@
 ** Login   <arthur.philippe@epitech.eu>
 **
 ** Started on  Fri May 12 14:24:00 2017 Arthur Philippe
-** Last update Fri May 12 16:32:12 2017 Arthur Philippe
+** Last update Mon May 29 12:05:08 2017 Arthur Philippe
 */
 
 #include <stdlib.h>
@@ -32,10 +32,14 @@ int	is_a_float(char *str)
 
 void	display_float_tab(float *tab)
 {
+  int	i;
+
+  i = 0;
   while (*tab != -1)
     {
-      dprintf(2, "%f\n", *tab);
+      dprintf(2, "#%d = %f\n", i, *tab);
       tab += 1;
+      i += 1;
     }
 }
 
@@ -48,7 +52,8 @@ float	*get_laser_tab(char **asw_tab)
   if (!(laser_tab = malloc(sizeof(float) * 42)))
     return (NULL);
   idx = 0;
-  while (*asw_tab)
+  asw_tab += 3;
+  while (*asw_tab && idx < 32)
     {
       if (is_a_float(*asw_tab))
 	{
@@ -69,6 +74,7 @@ float	*get_lidar(void)
 
   send_cmd(CMD_GET_LIDAR);
   asw = get_next_line(0);
+  dprintf(2, "got: %s\n", asw);
   laser_tab = NULL;
   if (asw)
     {

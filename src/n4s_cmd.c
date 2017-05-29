@@ -5,7 +5,7 @@
 ** Login   <arthur.philippe@epitech.eu>
 **
 ** Started on  Fri May 12 13:27:20 2017 Arthur Philippe
-** Last update Fri May 12 14:41:00 2017 Arthur Philippe
+** Last update Mon May 29 12:00:07 2017 Arthur Philippe
 */
 
 #include <stdio.h>
@@ -30,5 +30,5 @@ t_cmd_n4s g_cmds[] =
 void	send_cmd(char *cmd)
 {
   dprintf(1, "%s\n", cmd);
-  // dprintf(2, "%s\n", cmd);
+  dprintf(2, "sent: %s\n", cmd);
 }
