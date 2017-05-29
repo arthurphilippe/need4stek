@@ -5,11 +5,24 @@
 ** Login   <arthur.philippe@epitech.eu>
 **
 ** Started on  Wed Apr 12 14:47:39 2017 Arthur Philippe
-** Last update Fri May 12 15:08:31 2017 Arthur Philippe
+** Last update Mon May 29 12:59:07 2017 Arthur Philippe
 */
 
 #include <stdlib.h>
 #include "acp.h"
+
+void	free_tab(char **tab)
+{
+  int	i;
+
+  i = 0;
+  while (tab[i])
+    {
+      free(tab[i]);
+      i += 1;
+    }
+  free(tab);
+}
 
 int	word_count(char *str)
 {
@@ -58,30 +71,18 @@ char	**my_str_to_word_tab(char *str)
     return (NULL);
   while (str[it])
     {
-      tab_out[i] = malloc(sizeof(char) * my_strlen(str) + 2);
-      if (!tab_out[i])
-	return (0);
+      if (!(tab_out[i] = malloc(sizeof(char) * my_strlen(str) + 2)))
+	{
+	  free_tab(tab_out);
+	  return (NULL);
+	}
       while (str[it] && (str[it] == ':' || str[it] == '\t'))
 	it += 1;
       i2 = 0;
       while (str[it] && str[it] != ':' && str[it] != '\t')
 	tab_out[i][i2++] = str[it++];
-      tab_out[i][i2] = 0;
-      i += 1;
+      tab_out[i++][i2] = 0;
     }
   tab_out[i] = 0;
   return (tab_out);
-}
-
-void	free_tab(char **tab)
-{
-  int	i;
-
-  i = 0;
-  while (tab[i])
-    {
-      free(tab[i]);
-      i += 1;
-    }
-  free(tab);
 }

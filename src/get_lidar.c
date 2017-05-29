@@ -5,7 +5,7 @@
 ** Login   <arthur.philippe@epitech.eu>
 **
 ** Started on  Fri May 12 14:24:00 2017 Arthur Philippe
-** Last update Mon May 29 12:05:08 2017 Arthur Philippe
+** Last update Mon May 29 12:53:38 2017 Arthur Philippe
 */
 
 #include <stdlib.h>
@@ -13,6 +13,7 @@
 #include "defines.h"
 #include "ai.h"
 #include "acp.h"
+#include "str.h"
 #include "n4s_cmd.h"
 #include "fcts.h"
 
@@ -35,7 +36,7 @@ void	display_float_tab(float *tab)
   int	i;
 
   i = 0;
-  while (*tab != -1)
+  while (tab && *tab != -1.00)
     {
       dprintf(2, "#%d = %f\n", i, *tab);
       tab += 1;
@@ -49,7 +50,7 @@ float	*get_laser_tab(char **asw_tab)
   float	tmp;
   int	idx;
 
-  if (!(laser_tab = malloc(sizeof(float) * 42)))
+  if (!(laser_tab = ub_malloc(sizeof(float) * 42)))
     return (NULL);
   idx = 0;
   asw_tab += 3;
