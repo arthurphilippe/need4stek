@@ -5,7 +5,7 @@
 ** Login   <arthur.philippe@epitech.eu>
 **
 ** Started on  Fri May 12 14:20:28 2017 Arthur Philippe
-** Last update Fri Jun  2 11:58:09 2017 Arthur Philippe
+** Last update Fri Jun  2 12:09:23 2017 Arthur Philippe
 */
 
 #include <stdlib.h>
@@ -20,12 +20,12 @@ int		ai(void)
   t_cmd_outp	*asw;
   int		run;
 
-  run = 1;
+  run = TRUE;
   while (run)
     {
       asw = send_cmd(CMD_GET_LIDAR, 0.0, 0);
       if (!asw)
-	run = 0;
+	run = FALSE;
       else
 	{
 	  free(send_cmd(CMD_STEER, steer(asw->lidar), 0));
