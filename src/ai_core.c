@@ -5,7 +5,7 @@
 ** Login   <arthur.philippe@epitech.eu>
 **
 ** Started on  Fri May 12 14:20:28 2017 Arthur Philippe
-** Last update Fri Jun  2 11:29:02 2017 Arthur Philippe
+** Last update Fri Jun  2 11:42:09 2017 Arthur Philippe
 */
 
 #include <stdlib.h>
@@ -14,19 +14,6 @@
 #include "ai.h"
 #include "acp.h"
 #include "n4s_cmd.h"
-#include "fcts.h"
-
-void	display_tab(char **tab)
-{
-  int	i;
-
-  i = 0;
-  while (tab[i])
-    {
-      dprintf(2, "%d: %s\n", i, tab[i]);
-      i += 1;
-    }
-}
 
 int		ai(void)
 {

@@ -5,10 +5,9 @@
 ** Login   <arthur.philippe@epitech.eu>
 **
 ** Started on  Fri Jun  2 10:35:12 2017 Arthur Philippe
-** Last update Fri Jun  2 11:18:38 2017 Arthur Philippe
+** Last update Fri Jun  2 11:42:44 2017 Arthur Philippe
 */
 
-#include "defines.h"
 #include "n4s_cmd.h"
 
 float	sign_coef(float a, float b, float coef)

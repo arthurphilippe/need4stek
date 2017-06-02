@@ -1,16 +1,15 @@
 /*
-** str_fcts.c for QQ in /home/cheap/Code_Arena/Delivery/PSU/PSU_2016_minishell2/src
+** str_fcts.c for QQ in src
 **
 ** Made by Cheap
 ** Login   <anthony.tram@epitech.eu>
 **
 ** Started on  Tue Mar 21 09:18:18 2017 Cheap
-** Last update Fri Jun  2 11:38:58 2017 Arthur Philippe
+** Last update Fri Jun  2 11:41:56 2017 Arthur Philippe
 */
 
 #include <stdlib.h>
 #include "acp.h"
-#include "fcts.h"
 #include "defines.h"
 
 void		fully(char *str, int size)

@@ -5,7 +5,7 @@
 ** Login   <arthur.philippe@epitech.eu>
 **
 ** Started on  Fri May 12 14:24:00 2017 Arthur Philippe
-** Last update Mon May 29 14:49:45 2017 Arthur Philippe
+** Last update Fri Jun  2 11:42:11 2017 Arthur Philippe
 */
 
 #include <stdlib.h>
@@ -15,7 +15,6 @@
 #include "acp.h"
 #include "str.h"
 #include "n4s_cmd.h"
-#include "fcts.h"
 
 int	is_a_float(char *str)
 {

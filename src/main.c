@@ -5,7 +5,7 @@
 ** Login   <arthur.philippe@epitech.eu>
 **
 ** Started on  Wed May  3 10:55:23 2017 Arthur Philippe
-** Last update Fri Jun  2 11:31:45 2017 Arthur Philippe
+** Last update Fri Jun  2 11:42:18 2017 Arthur Philippe
 */
 
 #include <unistd.h>
@@ -14,7 +14,6 @@
 #include "ai.h"
 #include "acp.h"
 #include "n4s_cmd.h"
-#include "fcts.h"
 
 int	main()
 {
