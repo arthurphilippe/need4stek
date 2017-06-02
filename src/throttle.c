@@ -5,21 +5,21 @@
 ** Login   <arthur.philippe@epitech.eu>
 **
 ** Started on  Fri Jun  2 10:52:00 2017 Arthur Philippe
-** Last update Fri Jun  2 16:24:54 2017 Arthur Philippe
+** Last update Fri Jun  2 16:25:40 2017 Arthur Philippe
 */
 
 #include "throttle.h"
 
 static const t_throttle_table	g_table[] =
-{
-  {2000, 1},
-  {1500, 0.8},
-  {1000, 0.5},
-  {600, 0.4},
-  {400, 0.3},
-  {200, 0.2},
-  {TABLE_END, TABLE_END},
-};
+  {
+    {2000, 1},
+    {1500, 0.8},
+    {1000, 0.5},
+    {600, 0.4},
+    {400, 0.3},
+    {200, 0.2},
+    {TABLE_END, TABLE_END},
+  };
 
 float	throttle(float *lidar)
 {
