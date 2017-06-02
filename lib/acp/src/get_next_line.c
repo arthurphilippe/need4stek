@@ -5,7 +5,7 @@
 ** Login   <arthur.philippe@epitech.eu>
 **
 ** Started on  Sun May  7 21:16:35 2017 Arthur Philippe
-** Last update Mon May  8 11:12:45 2017 Arthur Philippe
+** Last update Fri Jun  2 12:06:18 2017 Arthur Philippe
 */
 
 #include <stdio.h>
@@ -70,9 +70,9 @@ char		*get_next_line(const int fd)
   int		eof_f;
   static int	old_fd = -2;
 
-  if (fd != old_fd)
+  if (fd == -2 || fd != old_fd)
     stack_leftover = reset_gnl(fd, &old_fd, stack_leftover);
-  if (!(buffer = ub_malloc(READ_SIZE + 1)))
+  if (fd == -2 || !(buffer = ub_malloc(READ_SIZE + 1)))
     return (NULL);
   stack = (stack_leftover) ? my_strappend(NULL, stack_leftover, 2) : NULL;
   eof_f = 0;
