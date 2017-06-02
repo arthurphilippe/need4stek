@@ -5,7 +5,7 @@
 ## Login   <arthur@epitech.net>
 ##
 ## Started on  Mon Nov  7 11:39:45 2016 Arthur Philippe
-## Last update Mon May 29 14:19:29 2017 Arthur Philippe
+## Last update Fri Jun  2 11:37:51 2017 Arthur Philippe
 ##
 
 CC	=	gcc
@@ -21,10 +21,10 @@ SRCS	=	src/main.c				\
 		src/n4s_cmd.c				\
 		src/n4s_asw.c				\
 		src/get_lidar.c				\
-		src/usefull_fcts/getfloat.c		\
+		src/steer.c				\
+		src/throttle.c				\
 		src/usefull_fcts/match.c		\
 		src/usefull_fcts/str_fcts.c		\
-		src/usefull_fcts/str.c			\
 		src/usefull_fcts/str_to_word_tab.c	\
 
 OBJS	=	$(SRCS:.c=.o)

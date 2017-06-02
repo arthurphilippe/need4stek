@@ -5,7 +5,7 @@
 ** Login   <arthur.philippe@epitech.eu>
 **
 ** Started on  Fri May 12 14:20:28 2017 Arthur Philippe
-** Last update Mon May 29 14:35:07 2017 Arthur Philippe
+** Last update Fri Jun  2 11:29:02 2017 Arthur Philippe
 */
 
 #include <stdlib.h>
@@ -37,8 +37,10 @@ int		ai(void)
   while (run)
     {
       asw = send_cmd(CMD_GET_LIDAR, 0.0, 0);
-      display_float_tab(asw->lidar);
-      run = 0;
+      free(send_cmd(CMD_STEER, steer(asw->lidar), 0));
+      free(send_cmd(CMD_FWD, throttle(asw->lidar), 0));
+      free(asw->lidar);
+      free(asw);
     }
   return (SUCCESS);
 }

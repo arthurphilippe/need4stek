@@ -5,7 +5,7 @@
 ** Login   <arthur.philippe@epitech.eu>
 **
 ** Started on  Mon May 29 13:07:59 2017 Arthur Philippe
-** Last update Mon May 29 15:06:07 2017 Arthur Philippe
+** Last update Fri Jun  2 11:32:51 2017 Arthur Philippe
 */
 
 #include <stdlib.h>
@@ -54,7 +54,10 @@ int	fill_asw_vals(char *asw_str, t_cmd_outp *asw, int type_f_asw)
   size = count_tab_entries(asw_tab);
   asw->ret_code = atoi(asw_tab[0]);
   if (type_f_asw == 1)
-    return (0);
+    {
+      free_tab(asw_tab);
+      return (0);
+    }
   else if (type_f_asw == 2 && size >= 36)
     asw->lidar = get_laser_tab(asw_tab);
   else if (type_f_asw == 3)
