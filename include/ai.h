@@ -5,7 +5,7 @@
 ** Login   <arthur.philippe@epitech.eu>
 **
 ** Started on  Fri May 12 14:21:12 2017 Arthur Philippe
-** Last update Fri Jun  2 13:56:00 2017 Arthur Philippe
+** Last update Fri Jun  2 16:06:40 2017 Arthur Philippe
 */
 
 #ifndef AI_H_
