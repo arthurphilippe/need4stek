@@ -5,7 +5,7 @@
 ** Login   <arthur.philippe@epitech.eu>
 **
 ** Started on  Fri Jun  2 15:53:12 2017 Arthur Philippe
-** Last update Fri Jun  2 15:57:16 2017 Arthur Philippe
+** Last update Fri Jun  2 16:33:10 2017 Arthur Philippe
 */
 
 #ifndef STEER_H_
@@ -19,4 +19,4 @@ typedef struct	s_steer_table
 
 # define TABLE_END -1.00
 
-#endif /* STEER_H_ */
+#endif /* !STEER_H_ */
