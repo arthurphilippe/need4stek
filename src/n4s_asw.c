@@ -5,7 +5,7 @@
 ** Login   <arthur.philippe@epitech.eu>
 **
 ** Started on  Mon May 29 13:07:59 2017 Arthur Philippe
-** Last update Fri Jun  2 11:52:08 2017 Arthur Philippe
+** Last update Fri Jun  2 13:47:03 2017 Arthur Philippe
 */
 
 #include <stdlib.h>
@@ -79,7 +79,8 @@ t_cmd_outp	*get_asw(char *cmd)
 
   if (!(asw_str = get_next_line(0)))
     return (NULL);
-  dprintf(2, "got: %s\n------------------------------\n", asw_str);
+  if (VERBOSE)
+    dprintf(2, "got: %s\n------------------------------\n", asw_str);
   if (match(asw_str, "*KO*") || match(asw_str, "*Track Cleared*")
       || (type_f_asw = get_asw_type(cmd)) == ERR
       || !(asw = ub_malloc(sizeof(t_cmd_outp))))

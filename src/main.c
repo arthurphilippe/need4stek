@@ -5,17 +5,18 @@
 ** Login   <arthur.philippe@epitech.eu>
 **
 ** Started on  Wed May  3 10:55:23 2017 Arthur Philippe
-** Last update Fri Jun  2 12:06:33 2017 Arthur Philippe
+** Last update Fri Jun  2 13:55:41 2017 Arthur Philippe
 */
 
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include "str.h"
 #include "ai.h"
 #include "acp.h"
 #include "n4s_cmd.h"
 
-int	main()
+int	main(void)
 {
   free(send_cmd("START_SIMULATION", 0.0, 0));
   ai();
