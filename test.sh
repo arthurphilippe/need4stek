@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cd n4s_package ; ./pipes.sh
+cd .n4s_package ; ./pipes.sh
